@@ -297,3 +297,20 @@ persistence:
   ## @param persistence.dataSource Custom PVC data source
   ##
   dataSource: {}
+
+## Network Policy parameters
+## ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+##
+networkPolicy:
+  ## @param networkPolicy.enabled Enable generating a network policy
+  ##
+  enabled: false
+  ## @param networkPolicy.policyTypes The kinds of rules this network policy contains
+  ##
+  policyTypes: []
+  ## @param networkPolicy.ingress Custom ingress rules for the policy. Remember to enable them in networkPolicy.policyTypes
+  ##
+  ingress: []
+  ## @param networkPolicy.egress Custom egress rules for the policy. Remember to enable them in networkPolicy.policyTypes
+  ##
+  egress: []

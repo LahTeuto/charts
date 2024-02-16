@@ -382,6 +382,34 @@
                     "default": {}
                 }
             }
+        },
+        "networkPolicy": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable generation of a network policy using supplied values"
+                },
+                "policyTypes": {
+                    "type": "array",
+                    "default": [],
+                    "description": "List of kinds of rules the generated policy implements",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ingress": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Ingress rules for the network policy"
+                },
+                "egress": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Egress rules for the network policy"
+                }
+            }
         }
     }
 }

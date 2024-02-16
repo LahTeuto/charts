@@ -86,6 +86,15 @@ helm install mailpit jouve/mailpit
 | `persistence.selector`      | Selector to match an existing Persistent Volume for WordPress data PVC | `{}`                |
 | `persistence.dataSource`    | Custom PVC data source                                                 | `{}`                |
 
+### Network Policy Parameters
+
+| Name                        | Description                                | Value   |
+| --------------------------- | ------------------------------------------ | ------- |
+| `networkPolicy.enabled`     | Enable generating a network policy         | `false` |
+| `networkPolicy.policyTypes` | List of kinds of rules the policy contains | `[]`    |
+| `networkPolicy.ingress`     | Custom ingress rules                       | `[]`    |
+| `networkPolicy.egress`      | Custom egress rules                        | `[]`    |
+
 ## tips
 
 ### Existing Secrets
